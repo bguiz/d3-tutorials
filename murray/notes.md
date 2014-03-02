@@ -33,3 +33,25 @@ Following along [this tutorial] by Scott Murray.
 		- each of these do something to the DOM, and return a d3 object that wraps around the actual return value
 		- this wrapping allows the chaining to occur
 - important to note that the order of chaining matters
+
+## binding data
+
+- mapping visual properties to data attributes
+	- that is what data visualisation is
+- in d3 binding is the process of attaching specific data attributes to specific DOM elements
+	- done using `selection.data()`, some data, and some DOM elements
+- d3 can handlemany different data formats"
+	- JS arrays, JS objects, JSON, GeoJSON, CSV
+- often we might need to bind data to DOM elements that do not exist, and create them on the fly
+	- this is because we do not know the number of elements that will be needed in a dataset with a variable number of elements
+	- `d3.enter()` solves this problem
+		- creates a placeholder, and allows you to insert elements on the fly
+- R-click and inspect element on the newly created nodes
+	- nothing is present in the DOM
+- Now eneter the following into the console
+	- `d3.selectAll('p')[0][0].__data__`
+	- `d3.selectAll('p')[0][1].__data__`
+	- etc... we see that the data has actually been saved against the elements
+- Another way: R-clickand select element on one of the paragraphs
+	- now in the console enter `$0.__data__`
+	- In chrome dev tools, `$0` refers to the last selected element
