@@ -7,7 +7,7 @@ Following along [this tutorial] by Scott Murray.
 - d3 requires you to know: HTML, DOM, CSS, Javascript, Browser Dev Tools
 - optinally requires you to know SVG (scalable vector graphics)
 
-## set up
+## setup
 
 - wget http://d3js.org/d3.v3.js
 	- or wget http://d3js.org/d3.v3.min.js
@@ -16,3 +16,9 @@ Following along [this tutorial] by Scott Murray.
 - then create a HTML file and use a script tage to reference it
 - then start a simple web server to view it in browser, e.g.
 	- python -m SimpleHTTPServer
+
+## adding elements
+
+- chainable syntax
+	- e.g. `d3.select("body").append("p").text("New paragraph!");`
+- since we are including the script instead of inlining it, we need to ensure that it is only run when 'DOMContentLoaded' is fired.
