@@ -75,3 +75,8 @@ Following along [this tutorial] by Scott Murray.
 - there is a convenienced method that can be used to toggle classes
 	- `d3.classed('className', trueOrFalse)`
 - use a combination of `attr`, `style`, and `classed`, to achieve binding between the data set and the DOM
+
+## the power of data()
+
+- you can throw different data sets at the same d3 code, and it will work
+- the `data(..)` function is responsbile for this
