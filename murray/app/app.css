@@ -1,0 +1,6 @@
+.my-bar-chart .bar {
+	display: inline-block;
+	width: 20px;
+	height: 100px;
+	background-color: teal;
+}
