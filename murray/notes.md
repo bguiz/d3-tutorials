@@ -61,3 +61,6 @@ Following along [this tutorial] by Scott Murray.
 - when you call `d3.data(..)`
 	- in any of the subsequent methods along the chain of d3 calls it makes available
 	- an anonymous function that gets passed the data for the current object as its first argument
+	- various d3 functions taken it a single argument
+		- if that argument is a primitive, it will simply be used as is
+		- that argument is a function instead, the function will be called with the data ofthe current element, and thevalue returned by the function will be used instead

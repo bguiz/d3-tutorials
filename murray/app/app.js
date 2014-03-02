@@ -14,5 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		.append('p')
 		.text(function(data) {
 			return data;
+		})
+		.style('color', function(d) {
+			if (d > 15) {
+				return 'red';
+			}
+			else {
+				return 'black';
+			}
 		});
 });
