@@ -33,3 +33,12 @@ Following along [this tutorial] by Scott Murray.
 		- each of these do something to the DOM, and return a d3 object that wraps around the actual return value
 		- this wrapping allows the chaining to occur
 - important to note that the order of chaining matters
+
+## binding data
+
+- mapping visual properties to data attributes
+	- that is what data visualisation is
+- in d3 binding is the process of attaching specific data attributes to specific DOM elements
+	- done using `selection.data()`, some data, and some DOM elements
+- d3 can handlemany different data formats"
+	- JS arrays, JS objects, JSON, GeoJSON, CSV
