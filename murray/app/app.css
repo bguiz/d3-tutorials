@@ -5,3 +5,9 @@
 	background-color: teal;
 	margin-right: 2px;
 }
+
+.hello-svg {
+	width: 500px;
+	height: 50px;
+	border: 1px solid black;
+}
