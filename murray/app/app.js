@@ -5,9 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	var dataset
 		// = [5, 10, 15, 20, 25];
-		= [ 25, 7, 5, 26, 11, 8, 25, 14, 23, 19,
-            14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
-            24, 18, 25, 9, 3 ];
+		// = [ 25, 7, 5, 26, 11, 8, 25, 14, 23, 19,
+        //     14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
+        //     24, 18, 25, 9, 3 ];
+        = [];
+    for (var i = 0; i < 25; ++i) {
+    	dataset.push(Math.round(Math.random() * 30));
+    }
 
 	//This will do nothing because there are currently no `p` elements
 	// d3.select('body').selectAll('p');
