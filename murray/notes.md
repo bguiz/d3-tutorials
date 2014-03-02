@@ -42,3 +42,7 @@ Following along [this tutorial] by Scott Murray.
 	- done using `selection.data()`, some data, and some DOM elements
 - d3 can handlemany different data formats"
 	- JS arrays, JS objects, JSON, GeoJSON, CSV
+- often we might need to bind data to DOM elements that do not exist, and create them on the fly
+	- this is because we do not know the number of elements that will be needed in a dataset with a variable number of elements
+	- `d3.enter()` solves this problem
+		- creates a placeholder, and allows you to insert elements on the fly
