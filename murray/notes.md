@@ -74,3 +74,4 @@ Following along [this tutorial] by Scott Murray.
 	- styles should be set using `style(..)` when setting display properties that are specific to single elements
 - there is a convenienced method that can be used to toggle classes
 	- `d3.classed('className', trueOrFalse)`
+- use a combination of `attr`, `style`, and `classed`, to achieve binding between the data set and the DOM

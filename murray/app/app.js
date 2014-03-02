@@ -29,5 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		.data(dataset)
 		.enter()
 		.append('div')
-		.classed('bar', true);
+		.classed('bar', true)
+		.style('height', function(d) {
+			return d*5 + 'px';
+		});
 });
