@@ -22,3 +22,14 @@ Following along [this tutorial] by Scott Murray.
 - chainable syntax
 	- e.g. `d3.select("body").append("p").text("New paragraph!");`
 - since we are including the script instead of inlining it, we need to ensure that it is only run when 'DOMContentLoaded' is fired.
+
+## chaining syntax
+
+- chaining methods allow us to perform several actions in a single line of code
+- a deconstruction
+	- `d3.select("body").append("p").text("New paragraph!");`
+	- `d3` global object for d3
+	- `.select(..)`, `.append(..)`, and `.text(..)`
+		- each of these do something to the DOM, and return a d3 object that wraps around the actual return value
+		- this wrapping allows the chaining to occur
+- important to note that the order of chaining matters
