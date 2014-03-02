@@ -64,3 +64,14 @@ Following along [this tutorial] by Scott Murray.
 	- various d3 functions taken it a single argument
 		- if that argument is a primitive, it will simply be used as is
 		- that argument is a function instead, the function will be called with the data ofthe current element, and thevalue returned by the function will be used instead
+
+## drawing divs
+
+- to add a class to an element, use `d3.attr(..)`
+- to add a style to an element, use `d3.style(..)`
+- for display properties
+	- classes should be set using `attr(..)` for setting properties that are shared between multiple elements
+	- styles should be set using `style(..)` when setting display properties that are specific to single elements
+- there is a convenienced method that can be used to toggle classes
+	- `d3.classed('className', trueOrFalse)`
+- use a combination of `attr`, `style`, and `classed`, to achieve binding between the data set and the DOM

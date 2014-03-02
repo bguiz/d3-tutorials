@@ -23,4 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
 				return 'black';
 			}
 		});
+
+	d3.select('.my-bar-chart')
+		.selectAll('div')
+		.data(dataset)
+		.enter()
+		.append('div')
+		.classed('bar', true)
+		.style('height', function(d) {
+			return d*5 + 'px';
+		});
 });
