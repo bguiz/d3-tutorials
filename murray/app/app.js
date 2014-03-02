@@ -1,3 +1,5 @@
 "use strict";
 
-console.log('Hello D3');
+document.addEventListener('DOMContentLoaded', function() {
+	d3.select('body').append('p').text('new paragraph!');
+});
