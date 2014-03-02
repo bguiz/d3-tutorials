@@ -12,5 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		.data(dataset)
 		.enter()
 		.append('p')
-		.text('New paragraph');
+		.text(function(data) {
+			return data;
+		});
 });

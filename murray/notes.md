@@ -55,3 +55,9 @@ Following along [this tutorial] by Scott Murray.
 - Another way: R-clickand select element on one of the paragraphs
 	- now in the console enter `$0.__data__`
 	- In chrome dev tools, `$0` refers to the last selected element
+
+## using your data
+
+- when you call `d3.data(..)`
+	- in any of the subsequent methods along the chain of d3 calls it makes available
+	- an anonymous function that gets passed the data for the current object as its first argument
