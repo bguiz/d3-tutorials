@@ -46,3 +46,12 @@ Following along [this tutorial] by Scott Murray.
 	- this is because we do not know the number of elements that will be needed in a dataset with a variable number of elements
 	- `d3.enter()` solves this problem
 		- creates a placeholder, and allows you to insert elements on the fly
+- R-click and inspect element on the newly created nodes
+	- nothing is present in the DOM
+- Now eneter the following into the console
+	- `d3.selectAll('p')[0][0].__data__`
+	- `d3.selectAll('p')[0][1].__data__`
+	- etc... we see that the data has actually been saved against the elements
+- Another way: R-clickand select element on one of the paragraphs
+	- now in the console enter `$0.__data__`
+	- In chrome dev tools, `$0` refers to the last selected element
