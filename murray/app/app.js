@@ -12,5 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
 		.data(dataset)
 		.enter()
 		.append('p')
-		.text('New paragraph');
+		.text(function(data) {
+			return data;
+		})
+		.style('color', function(d) {
+			if (d > 15) {
+				return 'red';
+			}
+			else {
+				return 'black';
+			}
+		});
 });
