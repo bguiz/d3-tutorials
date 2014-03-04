@@ -80,4 +80,65 @@ document.addEventListener('DOMContentLoaded', function() {
 			return d / 2;
 		});
 
+	// bar chart
+	var width = 500,
+		height = 150,
+		barPadding = 1;
+
+	var svgBarChart = d3.select('.my-svg')
+		.append('svg')
+		.attr('width', width)
+		.attr('height', height);
+
+	var barWidth = (width / dataset.length - barPadding);
+	var barHeightScale = 4;
+
+	var bars = svgBarChart.selectAll('rect')
+		.data(dataset)
+		.enter()
+		.append('rect');
+
+	//add basics: position and dimension
+	bars
+		.attr('x', function(d, i) { 
+			return i * (width / dataset.length);
+		 })
+		.attr('y', function(d) {
+			return height - d * barHeightScale;
+		})
+		.attr('width', barWidth)
+		.attr('height', function(d) {
+			return d * barHeightScale;
+		});
+
+	//add some colour
+	bars
+		.attr('fill', function(d) {
+			return 'rgb(0,0,'+d*7+')';
+		});
+
+	//add some labels
+	var barLabels = svgBarChart.selectAll('text')
+		.data(dataset)
+		.enter()
+		.append('text');
+
+	barLabels
+		.text(function(d) {
+			return d;
+		})
+		.attr('x', function(d,i) {
+			// return i * width / dataset.length;
+			return i * width / dataset.length
+				+ 0.5 * (width / dataset.length - barPadding);
+		})
+		.attr('y', function(d) {
+			// return height - d * barHeightScale + 15;
+			return height - d * barHeightScale + 14;
+		})
+		.attr('font-family', 'sans-serif')
+		.attr('font-size', '11px')
+		.attr('fill', 'white')
+		.attr('text-anchor', 'middle');
 });
+

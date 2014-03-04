@@ -132,3 +132,12 @@ Following along [this tutorial] by Scott Murray.
 	- can be used to store coordinates, shapes like lines and polygons, etc.
 	- D3 natively handles geodata using GeoJSON
 	- note that in GeoJSON, in coordinates, longitude comes before latitude
+
+## Making a Bar Chart
+
+- when making a bar chart, it is important to store some constant value variables outside of the d3 chain
+	- e.g. height and width, padding between bars
+- remember that the y-axis in svg is inverted, so we need to take this into account
+- we may us same dataset on the same svg, but enter and apend a different series of elements
+	- to do this easily, store a reference to the svg created before calling `data` on it
+- we are doing scaling manually for now
