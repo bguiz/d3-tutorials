@@ -73,4 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			return d;
 		});
 
+	circles
+		.attr('fill', 'yellow')
+		.attr('stroke', 'orange')
+		.attr('stroke-width', function(d) {
+			return d / 2;
+		});
+
 });
