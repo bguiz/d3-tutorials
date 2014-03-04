@@ -11,3 +11,23 @@
 	height: 50px;
 	border: 1px solid black;
 }
+
+.styled-svg {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+}
+
+.styled-svg .pumpkin {
+	fill: yellow;
+	stroke: orange;
+	stroke-width: 5;
+}
+
+/* we do *not* expect this to work because 
+cx, cy, and r are not recognised in css */
+.pumpkin-position {
+	cx: 50;
+	cy: 25;
+	r: 22;
+}

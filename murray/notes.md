@@ -95,3 +95,4 @@ Following along [this tutorial] by Scott Murray.
 	- elements within svg can be styled using either CSS, or inline
 		- all elements: fill, stroke, stroke-width, opacity
 		- text: font-family, font-size
+- you can apply styles to elements within svg using CSS selectors
