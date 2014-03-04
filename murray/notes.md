@@ -96,3 +96,4 @@ Following along [this tutorial] by Scott Murray.
 		- all elements: fill, stroke, stroke-width, opacity
 		- text: font-family, font-size
 - you can apply styles to elements within svg using CSS selectors
+- when you programmatically add svg elements, use `attr` to add properties 

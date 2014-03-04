@@ -14,7 +14,7 @@
 
 .styled-svg {
 	width: 300px;
-	height: 300px;
+	height: 100px;
 	border: 1px solid black;
 }
 
@@ -31,3 +31,11 @@ cx, cy, and r are not recognised in css */
 	cy: 25;
 	r: 22;
 }
+
+
+.layered-svg {
+	width: 300px;
+	height: 100px;
+	border: 1px solid black;
+}
+
