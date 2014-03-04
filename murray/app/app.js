@@ -80,4 +80,23 @@ document.addEventListener('DOMContentLoaded', function() {
 			return d / 2;
 		});
 
+	// bar chart
+	var width = 500,
+		height = 100;
+
+	var svgBarChart = d3.select('.my-svg')
+		.append('svg')
+		.attr('width', width)
+		.attr('height', height);
+
+	svgBarChart.selectAll('rect')
+		.data(dataset)
+		.enter()
+		.append('rect')
+		.attr('x', 0)
+		.attr('y', 0)
+		.attr('width', 20)
+		.attr('height', 100);
+
 });
+

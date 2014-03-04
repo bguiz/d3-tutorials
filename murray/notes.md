@@ -132,3 +132,5 @@ Following along [this tutorial] by Scott Murray.
 	- can be used to store coordinates, shapes like lines and polygons, etc.
 	- D3 natively handles geodata using GeoJSON
 	- note that in GeoJSON, in coordinates, longitude comes before latitude
+
+## Making a Bar Chart
