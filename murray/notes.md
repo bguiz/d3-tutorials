@@ -97,3 +97,9 @@ Following along [this tutorial] by Scott Murray.
 		- text: font-family, font-size
 - you can apply styles to elements within svg using CSS selectors
 - when you programmatically add svg elements, use `attr` to add properties 
+
+## Drawing SVGs
+
+- You can use D3 to create SVGs completely programmatically
+- You can store references to intermediate results of the D3 chained operations
+- after `data` in the D3, the anonymous function that gets taken in as the second paameter gets a second paraemeter if specified, which is the current index
