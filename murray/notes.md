@@ -90,3 +90,8 @@ Following along [this tutorial] by Scott Murray.
 	- however, note that some element do not have a closing tag, and are "self closing"
 	- e.g. `<element />`
 	- the root element is an `<svg>` tag
+- svg provides a means to draw using a coordinate system
+	- the options available are simple shapes (rect, circle, ellipse, line), text, and path (for complex shapes)
+	- elements within svg can be styled using either CSS, or inline
+		- all elements: fill, stroke, stroke-width, opacity
+		- text: font-family, font-size
