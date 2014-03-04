@@ -82,21 +82,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// bar chart
 	var width = 500,
-		height = 100;
+		height = 100,
+		barPadding = 1;
 
 	var svgBarChart = d3.select('.my-svg')
 		.append('svg')
 		.attr('width', width)
 		.attr('height', height);
 
+	var barWidth = (width / dataset.length - barPadding);
+	var barHeightScale = 4;
 	svgBarChart.selectAll('rect')
 		.data(dataset)
 		.enter()
 		.append('rect')
-		.attr('x', 0)
-		.attr('y', 0)
-		.attr('width', 20)
-		.attr('height', 100);
+		.attr('x', function(d, i) { 
+			return i * (width / dataset.length);
+		 })
+		.attr('y', function(d) {
+			return height - d * barHeightScale;
+		})
+		.attr('width', barWidth)
+		.attr('height', function(d) {
+			return d * barHeightScale;
+		});
 
 });
 
