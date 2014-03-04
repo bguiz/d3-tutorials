@@ -49,4 +49,35 @@ document.addEventListener('DOMContentLoaded', function() {
 		.attr('y', function(d) { return d[0] + 10; })
 		.attr('opacity', 0.5)
 		.attr('fill', function(d) { return d[2]; });
+
+	var createdSvg = d3.select('.my-svg')
+		.append('svg')
+		.classed('created-svg', true)
+		.attr('width', 300)
+		.attr('height', 200);
+
+	var ds2 = [5,10,15,20,25];
+	
+	var circles = createdSvg.selectAll('circle')
+		.data(ds2)
+		.enter()
+		.append('circle');
+
+	circles
+		.attr('cx', function(d,i) {
+			// the 2nd parameter in the callback is index
+			return i * 50 + 25;
+		})
+		.attr('cy', 25)
+		.attr('r', function(d) {
+			return d;
+		});
+
+	circles
+		.attr('fill', 'yellow')
+		.attr('stroke', 'orange')
+		.attr('stroke-width', function(d) {
+			return d / 2;
+		});
+
 });
