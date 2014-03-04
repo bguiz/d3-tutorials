@@ -102,4 +102,33 @@ Following along [this tutorial] by Scott Murray.
 
 - You can use D3 to create SVGs completely programmatically
 - You can store references to intermediate results of the D3 chained operations
-- after `data` in the D3, the anonymous function that gets taken in as the second paameter gets a second paraemeter if specified, which is the current index
+- after `data` in the D3, the anonymous function that gets taken in as the second parameter gets a second parameter if specified, which is the current index
+
+## data types
+
+- variables
+	- a variableis a datum, and is the building block of all other more complex data structures
+	- primitives
+		- there are different types of variables in javascript: number, boolean, string
+		- but they all use the same declaration, `var`
+	- arrays
+		- are a sequence of variables
+		- the array itself is a variable
+		- variables within the sequence can be accesed using the array variable and the index within the sequence
+		- most common use is to loop through the array in sequence, using a `for` loop
+			- called iteration
+	- objects
+		- are a sequence of key-value pairs
+		- the keys are always strings
+		- the values can be of any type
+- data types can be combined to create complex daa structures
+	- arrays within objects, objects within arrays, an primitives in both of them
+- JSON
+	- a specific syntax for rpesenting a Javascript variable
+	- essentially all keys must be quoted
+	- all strings must be quoted using double quotes: `"`
+- GeoJSON
+	- a formalised JSON syntax used to represent geospatial information
+	- can be used to store coordinates, shapes like lines and polygons, etc.
+	- D3 natively handles geodata using GeoJSON
+	- note that in GeoJSON, in coordinates, longitude comes before latitude
