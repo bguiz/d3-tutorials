@@ -80,3 +80,20 @@ Following along [this tutorial] by Scott Murray.
 
 - you can throw different data sets at the same d3 code, and it will work
 - the `data(..)` function is responsbile for this
+
+## an SVG primer
+
+- d3 is most useful when used to generate and manipulate SVG visuals
+	- HTML elements are a little unwieldy for data visualisations
+	- vector drawing programs, such as SVG, are much better suited
+- the svg element can be defined using markup similar to HTML
+	- however, note that some element do not have a closing tag, and are "self closing"
+	- e.g. `<element />`
+	- the root element is an `<svg>` tag
+- svg provides a means to draw using a coordinate system
+	- the options available are simple shapes (rect, circle, ellipse, line), text, and path (for complex shapes)
+	- elements within svg can be styled using either CSS, or inline
+		- all elements: fill, stroke, stroke-width, opacity
+		- text: font-family, font-size
+- you can apply styles to elements within svg using CSS selectors
+- when you programmatically add svg elements, use `attr` to add properties 
