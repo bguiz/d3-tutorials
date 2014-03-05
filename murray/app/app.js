@@ -155,6 +155,9 @@ document.addEventListener('DOMContentLoaded', function() {
 			[ 220,   88 ]
 		];
 
+	width = 500;
+	height = 300;
+
 	var svgScatter = d3.select('.my-svg')
 		.append('svg')
 		.classed('scatter-plot', true)
@@ -178,16 +181,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		.range([10,350]);
 
 	//now scale the scatterplot
+	var padding = 20;
+
 	var xScale = d3.scale.linear()
 		.domain([0, d3.max(scatterDataSet, function(d) {
 			return d[0];
 		})])
-		.range([0, width]);
+		.range([padding, width - 2 * padding]);
+
 	var yScale = d3.scale.linear()
-		.domain([1, d3.max(scatterDataSet, function(d) {
+		.domain([0, d3.max(scatterDataSet, function(d) {
 			return d[1];
 		})])
-		.range([0, height]);
+		//invert the y-axis
+		.range([height - padding, 0]);
+
+	var rScale = d3.scale.linear()
+		.domain([0, d3.max(scatterDataSet, function(d) {
+			return d[1];
+		})])
+		.range([2, 5]);
 
 	//basics: positions
 	scatterCircles
@@ -198,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			return yScale(d[1]);
 		})
 		.attr('r', function(d) {
-			return Math.sqrt(height - d[1]);
+			return rScale(d[1]);
 		});
 
 	// add labels
@@ -212,10 +225,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			return ''+d[0]+','+d[1];
 		})
 		.attr('x', function(d) {
-			return d[0];
+			return xScale(d[0]);;
 		})
 		.attr('y', function(d) {
-			return d[1];
+			return yScale(d[1]);
 		})
 		.attr({
 			'font-family': 'sans-serif',
