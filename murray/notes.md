@@ -147,3 +147,23 @@ Following along [this tutorial] by Scott Murray.
 - use a two dimensional array as the data set for a scatter plot
 	- bar chart was a one dimensional array
 - use the same techniques to add text that we used to add labels
+
+## Scales
+
+- scales are functions that map from an input domain to an output range
+	- valuesin data sets do not need to correspond to pixel values when drawn
+	- scales are functions that perform that mapping
+	- we will noly be covering linear scales
+- input domain: range of possible input data values --> dataset
+- output range: range of possible output values --> pixels
+- normalisation: process of mapping any numeric value to one that is between 0 and 1
+	- using linear scales, we let d3 take care of the normalisation for us
+- in d3 scales are functions
+	- apply these functions to the attributes, useful for x and y coordinates
+- remember to apply the scales to both the plot points and the text labels
+- linear scales have other properties
+	- `nice()` to "round" the domain range points to the nearest 1 significant figure
+	- `rangeRound()` instead of `range()` torougd the output range points to nearest whole numbers
+	- `clamp(true)` to ensure that output values which are outside the specified range are clamped to the min or max values
+- types of scales
+	- indentity, sqrt, pow, log, quantize, quantile, ordinal
