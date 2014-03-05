@@ -1,0 +1,52 @@
+.my-bar-chart .bar {
+	display: inline-block;
+	width: 20px;
+	height: 100px;
+	background-color: teal;
+	margin-right: 2px;
+}
+
+.hello-svg {
+	width: 500px;
+	height: 50px;
+	border: 1px solid black;
+}
+
+.styled-svg {
+	width: 300px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+.styled-svg .pumpkin {
+	fill: yellow;
+	stroke: orange;
+	stroke-width: 5;
+}
+
+/* we do *not* expect this to work because 
+cx, cy, and r are not recognised in css */
+.pumpkin-position {
+	cx: 50;
+	cy: 25;
+	r: 22;
+}
+
+
+.layered-svg {
+	width: 300px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+.scatter-plot .axis path, .scatter-plot .axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+.scatter-plot .axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
