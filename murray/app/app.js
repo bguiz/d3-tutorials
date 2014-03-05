@@ -239,10 +239,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	//basics: set up axes
 	var xAxis = d3.svg.axis()
 		.scale(xScale)
-		.orient('bottom');
+		.orient('bottom')
+		.ticks(5);
 
 	svgScatter
 		.append('g')
+		.classed('axis', true)
+		.attr('transform', 'translate(0,'+(height - padding)+')')
 		//the axis is generated within this group
 		.call(xAxis);
 });

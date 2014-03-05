@@ -175,3 +175,7 @@ Following along [this tutorial] by Scott Murray.
 	- they are specific to SVG
 	- they are quantitative - not ordinal
 - `call()` takes a selection and hands it off to any function
+- you can apply styles to axes elements, like ou can with any other svg elements
+- use a transform attribute to make the x-axis scale go to the bottomof the svg
+- use a ticks attribute to set the rough number of ticks on the scale
+	- d3 will not use the exact number
