@@ -235,5 +235,15 @@ document.addEventListener('DOMContentLoaded', function() {
 			'font-size': '11px',
 			fill: 'red'
 		});
+
+	//basics: set up axes
+	var xAxis = d3.svg.axis()
+		.scale(xScale)
+		.orient('bottom');
+
+	svgScatter
+		.append('g')
+		//the axis is generated within this group
+		.call(xAxis);
 });
 
