@@ -142,18 +142,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		.attr('fill', 'white')
 		.attr('text-anchor', 'middle');
 
-	var scatterDataSet =[
-			[ 5,     20 ],
-			[ 480,   90 ],
-			[ 250,   50 ],
-			[ 100,   33 ],
-			[ 330,   95 ],
-			[ 410,   12 ],
-			[ 475,   44 ],
-			[ 25,    67 ],
-			[ 85,    21 ],
-			[ 220,   88 ]
-		];
+	var scatterDataSet
+		// = [
+		// 	[ 5,     20 ],
+		// 	[ 480,   90 ],
+		// 	[ 250,   50 ],
+		// 	[ 100,   33 ],
+		// 	[ 330,   95 ],
+		// 	[ 410,   12 ],
+		// 	[ 475,   44 ],
+		// 	[ 25,    67 ],
+		// 	[ 85,    21 ],
+		// 	[ 220,   88 ]
+		// ];
+		= [];
+
+	for (var i = 0; i < 30; ++i) {
+		var x = Math.round(Math.random() * 100);
+		var y = Math.round(Math.random() * 321);
+		scatterDataSet.push([x, y]);
+	}
 
 	width = 500;
 	height = 300;
@@ -235,5 +243,30 @@ document.addEventListener('DOMContentLoaded', function() {
 			'font-size': '11px',
 			fill: 'red'
 		});
+
+	//basics: set up axes
+	var xAxis = d3.svg.axis()
+		.scale(xScale)
+		.orient('bottom')
+		.ticks(5);
+
+	svgScatter
+		.append('g')
+		.classed('axis', true)
+		.attr('transform', 'translate(0,'+(height - padding)+')')
+		//the axis is generated within this group
+		.call(xAxis);
+
+	//add a y-axis
+	var yAxis = d3.svg.axis()
+		.scale(yScale)
+		.orient('left')
+		.ticks(5);
+
+	svgScatter
+		.append('g')
+		.attr('class', 'axis')
+		.attr('transform', 'translate('+padding+',0)')
+		.call(yAxis);
 });
 
