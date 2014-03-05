@@ -146,3 +146,4 @@ Following along [this tutorial] by Scott Murray.
 
 - use a two dimensional array as the data set for a scatter plot
 	- bar chart was a one dimensional array
+- use the same techniques to add text that we used to add labels

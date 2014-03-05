@@ -177,6 +177,30 @@ document.addEventListener('DOMContentLoaded', function() {
 		.attr('cy', function(d) {
 			return d[1];
 		})
-		.attr('r', 5);
+		.attr('r', function(d) {
+			return Math.sqrt(height - d[1]);
+		});
+
+	// add labels
+	var scatterLabels = svgScatter.selectAll('text')
+		.data(scatterDataSet)
+		.enter()
+		.append('text');
+
+	scatterLabels
+		.text(function(d) {
+			return ''+d[0]+','+d[1];
+		})
+		.attr('x', function(d) {
+			return d[0];
+		})
+		.attr('y', function(d) {
+			return d[1];
+		})
+		.attr({
+			'font-family': 'sans-serif',
+			'font-size': '11px',
+			fill: 'red'
+		});
 });
 
