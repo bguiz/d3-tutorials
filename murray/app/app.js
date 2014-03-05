@@ -169,13 +169,33 @@ document.addEventListener('DOMContentLoaded', function() {
 		.enter()
 		.append('circle');
 
+	//create a scale
+	var scale = d3.scale.linear();
+
+	//set a domain and range
+	scale
+		.domain([100,500])
+		.range([10,350]);
+
+	//now scale the scatterplot
+	var xScale = d3.scale.linear()
+		.domain([0, d3.max(scatterDataSet, function(d) {
+			return d[0];
+		})])
+		.range([0, width]);
+	var yScale = d3.scale.linear()
+		.domain([1, d3.max(scatterDataSet, function(d) {
+			return d[1];
+		})])
+		.range([0, height]);
+
 	//basics: positions
 	scatterCircles
 		.attr('cx', function(d) {
-			return d[0];
+			return xScale(d[0]);
 		})
 		.attr('cy', function(d) {
-			return d[1];
+			return yScale(d[1]);
 		})
 		.attr('r', function(d) {
 			return Math.sqrt(height - d[1]);

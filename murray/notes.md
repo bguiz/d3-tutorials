@@ -158,4 +158,5 @@ Following along [this tutorial] by Scott Murray.
 - output range: range of possible output values --> pixels
 - normalisation: process of mapping any numeric value to one that is between 0 and 1
 	- using linear scales, we let d3 take care of the normalisation for us
-
+- in d3 scales are functions
+	- apply these functions to the attributes, useful for x and y coordinates
