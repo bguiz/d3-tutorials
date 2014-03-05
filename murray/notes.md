@@ -141,3 +141,8 @@ Following along [this tutorial] by Scott Murray.
 - we may us same dataset on the same svg, but enter and apend a different series of elements
 	- to do this easily, store a reference to the svg created before calling `data` on it
 - we are doing scaling manually for now
+
+## Making a scatterplot
+
+- use a two dimensional array as the data set for a scatter plot
+	- bar chart was a one dimensional array

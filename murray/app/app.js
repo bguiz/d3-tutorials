@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	var svgBarChart = d3.select('.my-svg')
 		.append('svg')
+		.classed('bar-chart', true)
 		.attr('width', width)
 		.attr('height', height);
 
@@ -140,5 +141,42 @@ document.addEventListener('DOMContentLoaded', function() {
 		.attr('font-size', '11px')
 		.attr('fill', 'white')
 		.attr('text-anchor', 'middle');
+
+	var scatterDataSet =[
+			[ 5,     20 ],
+			[ 480,   90 ],
+			[ 250,   50 ],
+			[ 100,   33 ],
+			[ 330,   95 ],
+			[ 410,   12 ],
+			[ 475,   44 ],
+			[ 25,    67 ],
+			[ 85,    21 ],
+			[ 220,   88 ]
+		];
+
+	var svgScatter = d3.select('.my-svg')
+		.append('svg')
+		.classed('scatter-plot', true)
+		.attr({
+			width: width,
+			height: height
+		});
+
+	var scatterCircles = svgScatter
+		.selectAll('circle')
+		.data(scatterDataSet)
+		.enter()
+		.append('circle');
+
+	//basics: positions
+	scatterCircles
+		.attr('cx', function(d) {
+			return d[0];
+		})
+		.attr('cy', function(d) {
+			return d[1];
+		})
+		.attr('r', 5);
 });
 
